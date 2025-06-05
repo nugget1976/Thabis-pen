@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect With Me</title>
+  <style>
+    body {
+      background-color: #1c1c1c;
+      color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 30px;
+      background-color: #2a2a2a;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    h1 {
+      color: #db7093;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .social-links a {
+      margin: 0 12px;
+      color: #db7093;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+      background: #333;
+      color: #f5f5f5;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #800020;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #b76e79;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Connect With Me</h1>
+
+    <div class="social-links">
+      <a href="mailto:thabithamnguni44@gmail.com">📧 Email</a>
+      <a href="https://www.instagram.com/nu.gget3" target="_blank">📸 Instagram</a>
+      <a href="https://www.tiktok.com/nu.gget3" target="_blank">🎵 TikTok</a>
+    </div>
+
+    <form action="https://formspree.io/f/mjkwnbze" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="_replyto" id="email" required />
+
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Nqobile Thabitha Mnguni. All rights reserved.
+  </footer>
+
+</body>
+</html>
