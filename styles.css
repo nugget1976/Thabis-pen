@@ -1,0 +1,104 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1c1c; /* Deep Charcoal */
+  color: #f5f5f5; /* Warm White */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d4a5a5; /* Dusty Rose */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #b43757; /* Wine Red */
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.story-preview {
+  display: flex;
+  background-color: #2a2a2a;
+  border: 1px solid #b43757; /* Wine Red accent */
+  border-radius: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.story-preview:hover {
+  transform: scale(1.01);
+}
+
+.story-preview img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.story-info {
+  padding: 20px;
+}
+
+.story-info h2 a {
+  color: #d4a5a5; /* Dusty Rose */
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.story-info h2 a:hover {
+  color: #b43757; /* Wine Red */
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  color: #dcdcdc;
+}
+
+/* Button style (if you add any buttons later) */
+button {
+  background-color: #800020; /* Burgundy */
+  color: #f5f5f5;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b76e79; /* Rose-gold hover */
+}
