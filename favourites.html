@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Favourite Stories</title>
+  <link rel="stylesheet" href="css/favourites.css">
+</head>
+<body>
+  <div class="container">
+    <h1>❤️ My Favourites</h1>
+    <ul id="favourites-list">
+      <!-- JavaScript will fill this list -->
+    </ul>
+    <a class="home-link" href="index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+    const list = document.getElementById("favourites-list");
+
+    if (favourites.length === 0) {
+      list.innerHTML = "<li>No favourites added yet.</li>";
+    } else {
+      favourites.forEach(id => {
+        let title = "";
+        let link = "#";
+
+        if (id === "echoes-of-pain") {
+          title = "Echoes of Pain";
+          link = "stories/echoes-of-pain.html";
+        } else if (id === "girl-i-buried") {
+          title = "The Girl I Buried Twice";
+          link = "stories/the-girl-i-buried-twice/index.html";
+        }
+
+        const item = document.createElement("li");
+        item.innerHTML = `<a href="${link}">${title}</a>`;
+        list.appendChild(item);
+      });
+    }
+  </script>
+</body>
+</html>
