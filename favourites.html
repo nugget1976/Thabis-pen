@@ -3,48 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>My Favourite Stories</title>
-  <link rel="stylesheet" href="favourites.css">
+  <link rel="stylesheet" href="css/favourites.css">
 </head>
 <body>
   <div class="container">
-    <h1>❤️ My Favourites</h1>
-    <ul id="favourites-list">
-      <!-- JavaScript will fill this list -->
-    </ul>
+    <h1>❤️ My Favourite Stories</h1>
+    <ul id="favourites-list"></ul>
     <a class="home-link" href="index.html">← Back to Home</a>
   </div>
 
   <script>
     const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+    const stories = {
+      "echoes-of-pain": { title: "Echoes of Pain", link: "stories/echoes-of-pain/index.html" },
+      "girl-i-buried": { title: "The Girl I Buried Twice", link: "buried/the-girl-i-buried-twice/index.html" },
+      "demon-love": { title: "I Fell in Love with a Demon", link: "inlovewithdemon.jpg" },
+      "fearless": { title: "Fear Fears the Fearless", link: "fearfearsfearless.jpg" },
+      "behind-eyes": { title: "What Lies Behind Her Eyes", link: "hereyes.jpg" },
+      "united-by-fate": { title: "United by Fate", link: "unitedbyfate.png" }
+    };
+
     const list = document.getElementById("favourites-list");
 
     if (favourites.length === 0) {
       list.innerHTML = "<li>No favourites added yet.</li>";
     } else {
       favourites.forEach(id => {
-        let title = "";
-        let link = "#";
-
-        if (id === "echoes-of-pain") {
-          title = "Echoes of Pain";
-          link = "stories/echoes-of-pain.html";
-        } else if (id === "the-girl-i-buried") {
-          title = "The Girl I Buried Twice";
-          link = "buried/the-girl-i-buried-twice.html";
-        } else if (id === "united-by-fate") {
-          title = "united by fate";
-          link = "unitedbyfate.png";
-         } else if (id === "what-lies-behind-her-eyes") {
-          title = "What lies behind her eyes";
-          link = "hereyes.jpg";
-         } else if (id === "mrwilson") {
-          title = "Mr Wilson";
-          link = "mrwilson.jpg";
-        }
-
         const item = document.createElement("li");
-        item.innerHTML = `<a href="${link}">${title}</a>`;
-        list.appendChild(item);
+        if (stories[id]) {
+          item.innerHTML = `<a href="${stories[id].link}">${stories[id].title}</a>`;
+          list.appendChild(item);
+        }
       });
     }
   </script>
